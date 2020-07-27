@@ -1,0 +1,8 @@
+
+©
+java:S1130"’Remove the declaration of thrown exception 'org.springframework.security.core.userdetails.UsernameNotFoundException' which is a runtime exception.(žÌÃŸ
+a
+java:S2583""DChange this condition so that it does not always evaluate to "false"(»ç€ 8Ñü£Ú¸.
+s	java:S116"YRename this field "USER_NOT_EXIST" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãÐºžûÿÿÿÿ
+<
+java:S1170"!Make this final field static too.(ãÐºžûÿÿÿÿ

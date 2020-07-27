@@ -1,0 +1,14 @@
+
+A
+java:S1168A"+Return an empty collection instead of null.(¥¹ï
+A
+java:S1168F"+Return an empty collection instead of null.(¥¹ï
+[	java:S112Q"FDefine and throw a dedicated exception instead of using a generic one.(¶ÄÛÐ
+>
+java:S11483"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+ˆ
+java:S1130."mRemove the declaration of thrown exception 'java.lang.IllegalArgumentException' which is a runtime exception.(Ò¢¸Ïûÿÿÿÿ
+‚
+java:S1130Q"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(¶ÄÛÐ
+L
+java:S2696R"6Make the enclosing method "static" or remove this set.(°Óïù
