@@ -55,7 +55,7 @@ public class PermissionServiceImpl implements PermissionService {
         }
         Date date = new Date();
         permission.setUpdateTime(date);
-        permissionDAO.updateByPrimaryKey(permission);
+        permissionDAO.updateByPrimaryKeySelective(permission);
         return false;
     }
 
