@@ -8,8 +8,12 @@ import lombok.Data;
  */
 @Data
 public class RolePermissionDTO {
-
+    /**
+     * 角色名
+     */
     private String name;
-
+    /**
+     * 访问路径
+     */
     private String url;
 }

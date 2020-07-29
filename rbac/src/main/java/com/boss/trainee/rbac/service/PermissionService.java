@@ -1,8 +1,6 @@
 package com.boss.trainee.rbac.service;
 
-import com.boss.trainee.rbac.po.Permission;
-
-import java.util.List;
+import com.boss.trainee.rbac.service.dto.PermissionDTO;
 
 /**
  * @author: Jianbinbing
@@ -10,5 +8,11 @@ import java.util.List;
  */
 public interface PermissionService {
 
-    boolean insertList(List<Permission> permissionList);
+    /**
+     * 给角色增加权限
+     *
+     * @param permissionDTO
+     * @return
+     */
+    boolean insert(PermissionDTO permissionDTO);
 }

@@ -88,10 +88,10 @@ public class MyInvocationSecurityMetadataSourceService implements FilterInvocati
         List<RolePermissionDTO> rolePermissons = permissionDAO.getRolePermissionDTO();
 
         //某个资源 可以被哪些角色访问
-        for (RolePermissionDTO rolePermisson : rolePermissons) {
+        for (RolePermissionDTO rolePermission : rolePermissons) {
 
-            String url = rolePermisson.getUrl();
-            String roleName = rolePermisson.getName();
+            String url = rolePermission.getUrl();
+            String roleName = rolePermission.getName();
             ConfigAttribute role = new SecurityConfig(roleName);
 
             if (map.containsKey(url)) {

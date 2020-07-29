@@ -3,7 +3,7 @@ package com.boss.trainee.rbac.filter;
 import com.boss.trainee.rbac.service.dto.UserDTO;
 import com.boss.trainee.rbac.utils.JacksonUtil;
 import com.boss.trainee.rbac.utils.JwtTokenUtil;
-import com.boss.trainee.rbac.vo.LoginUser;
+import com.boss.trainee.rbac.vo.LoginUserVO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -42,7 +42,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
         // 从输入流中获取到登录的信息
         try {
-            LoginUser loginUser = new ObjectMapper().readValue(request.getInputStream(), LoginUser.class);
+            LoginUserVO loginUser = new ObjectMapper().readValue(request.getInputStream(), LoginUserVO.class);
             return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(loginUser.getUsername(), loginUser.getPassword(), new ArrayList<>())
             );

@@ -1,6 +1,8 @@
 package com.boss.trainee.rbac.dao;
 
 import com.boss.trainee.rbac.po.RolePermission;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 
@@ -11,5 +13,13 @@ import tk.mybatis.mapper.common.Mapper;
 @Repository
 public interface RolePermissionDAO extends Mapper<RolePermission> {
 
-
+    /**
+     * 根据角色和权限获取id
+     *
+     * @param roleId
+     * @param permissionId
+     * @return
+     */
+    @Select("select id from role_permission where role_id=#{roleId} and permission_id=#{permissionId}")
+    Long get(@Param("roleId") Long roleId, @Param("permissionId") Long permissionId);
 }

@@ -1,5 +1,7 @@
 package com.boss.trainee.rbac.service;
 
+import com.boss.trainee.rbac.vo.RoleEditVO;
+
 import java.util.Map;
 
 /**
@@ -20,20 +22,16 @@ public interface AdminService {
      * 给用户设置角色
      * 需要授权人拥有的权限才能赋予
      *
-     * @param adminId
-     * @param uid
-     * @param roleId
+     * @param editVO
      * @return
      */
-    boolean setRole(Long adminId, Long uid, Long roleId);
+    boolean setRole(RoleEditVO editVO);
 
     /**
      * 删除某角色已有的权限
      *
-     * @param adminId
-     * @param uid
-     * @param roleId
+     * @param editVO
      * @return
      */
-    boolean removeRole(Long adminId, Long uid, Long roleId);
+    boolean removeRole(RoleEditVO editVO);
 }

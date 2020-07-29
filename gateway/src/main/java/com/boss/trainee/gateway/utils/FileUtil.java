@@ -16,21 +16,7 @@ public class FileUtil {
 
     public static void read(StringBuilder stringBuilder) {
 
-//        File file = new File(FILEPATH);
-//        if (!file.exists()) {
-//            try {
-//                file.createNewFile();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        try {
-//            FileWriter fileWriter = new FileWriter(FILEPATH);
-//            fileWriter.write(stringBuilder.toString());
-//            fileWriter.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+
         FileOutputStream o = null;
         byte[] buff = new byte[]{};
         try {

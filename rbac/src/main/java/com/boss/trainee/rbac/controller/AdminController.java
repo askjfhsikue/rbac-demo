@@ -1,11 +1,16 @@
 package com.boss.trainee.rbac.controller;
 
 import com.boss.trainee.rbac.service.AdminService;
+import com.boss.trainee.rbac.service.PermissionService;
 import com.boss.trainee.rbac.service.RoleService;
+import com.boss.trainee.rbac.service.dto.PermissionDTO;
 import com.boss.trainee.rbac.utils.JwtTokenUtil;
+import com.boss.trainee.rbac.vo.RoleEditVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,27 +32,44 @@ public class AdminController {
     private HttpServletRequest request;
     @Autowired
     private RoleService roleService;
+    @Autowired
+    private PermissionService permissionService;
 
     @GetMapping("/setRole")
-    public Object setRole(Long uid, Long roleId) {
+    public Object setRole(RoleEditVO editVO) {
         Long adminId = JwtTokenUtil.getUid(request);
-        log.info("adminId:{}", adminId);
-        adminService.setRole(adminId, uid, roleId);
+        editVO.setAdminId(adminId);
+        adminService.setRole(editVO);
         return true;
     }
 
     @GetMapping("/removeRole")
-    public Object removeRole(Long uid, Long roleId) {
+    public Object removeRole(RoleEditVO editVO) {
         Long adminId = JwtTokenUtil.getUid(request);
-        log.info("adminId:{}", adminId);
-        adminService.removeRole(adminId, uid, roleId);
+        editVO.setAdminId(adminId);
+        adminService.removeRole(editVO);
         return true;
     }
 
     @GetMapping("/addPermission")
-    public Object addPermission(Long roleId, Long permissionId) {
+    public Object addPermission(RoleEditVO editVO) {
         Long adminId = JwtTokenUtil.getUid(request);
-        roleService.addPermissions(adminId, roleId, permissionId);
+        editVO.setAdminId(adminId);
+        roleService.addPermissions(editVO);
+        return true;
+    }
+
+    @GetMapping("/deletePermission")
+    public Object deletePermission(RoleEditVO editVO) {
+        Long adminId = JwtTokenUtil.getUid(request);
+        editVO.setAdminId(adminId);
+        roleService.removePermission(editVO);
+        return true;
+    }
+
+    @PostMapping("/insert")
+    public Object insert(@RequestBody PermissionDTO permissionDTO) {
+        permissionService.insert(permissionDTO);
         return true;
     }
 }

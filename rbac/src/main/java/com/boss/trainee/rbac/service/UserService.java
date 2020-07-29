@@ -17,5 +17,12 @@ public interface UserService {
      */
     UserDTO get(String username);
 
+    /**
+     * 新增用户,并赋予初始角色
+     *
+     * @param userDTO
+     * @return
+     */
+    boolean add(UserDTO userDTO);
 
 }

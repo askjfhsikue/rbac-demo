@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 /**
  * @author: Jianbinbing
@@ -32,4 +33,14 @@ public class UserRole {
      */
     @Column
     private Long roleId;
+    /**
+     * 创建时间
+     */
+    @Column
+    private Date createTime;
+    /**
+     * 修改时间
+     */
+    @Column
+    private Date updateTime;
 }

@@ -25,18 +25,21 @@ CREATE TABLE `permission` (
   `title` char(50) NOT NULL,
   `url` varchar(64) NOT NULL,
   `status` tinyint(4) NOT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 /*Data for the table `permission` */
 
-insert  into `permission`(`id`,`title`,`url`,`status`) values 
-(1,'setRole','/admin/setRole',1),
-(2,'test','/user/test',1),
-(3,'dev','/user/dev',1),
-(4,'master','/user/master',1),
-(5,'removeRole','/admin/removeRole',1),
-(6,'addPermission','/admin/addPermission',1);
+insert  into `permission`(`id`,`title`,`url`,`status`,`create_time`,`update_time`) values 
+(1,'setRole','/admin/setRole',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(2,'test','/user/test',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(3,'dev','/user/dev',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(4,'master','/user/master',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(5,'removeRole','/admin/removeRole',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(6,'addPermission','/admin/addPermission',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(7,'deletePermission','/admin/deletePermission',1,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 
 /*Table structure for table `role` */
 
@@ -46,15 +49,17 @@ CREATE TABLE `role` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` char(32) NOT NULL,
   `status` tinyint(4) NOT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 /*Data for the table `role` */
 
-insert  into `role`(`id`,`name`,`status`) values 
-(1,'ADMIN',1),
-(2,'USER',1),
-(3,'TEST',1);
+insert  into `role`(`id`,`name`,`status`,`create_time`,`update_time`) values 
+(1,'ADMIN',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(2,'USER',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(3,'TEST',1,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 
 /*Table structure for table `role_permission` */
 
@@ -64,19 +69,24 @@ CREATE TABLE `role_permission` (
   `role_id` bigint(20) NOT NULL,
   `permission_id` bigint(20) NOT NULL,
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 /*Data for the table `role_permission` */
 
-insert  into `role_permission`(`role_id`,`permission_id`,`id`) values 
-(1,1,1),
-(1,2,2),
-(2,3,3),
-(3,4,4),
-(1,5,5),
-(1,6,6),
-(1,4,7);
+insert  into `role_permission`(`role_id`,`permission_id`,`id`,`create_time`,`update_time`) values 
+(1,1,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(1,2,2,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(2,3,3,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(3,4,4,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(1,5,5,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(1,6,6,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(1,7,8,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(2,4,9,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(1,3,10,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(1,4,11,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 
 /*Table structure for table `user` */
 
@@ -87,14 +97,16 @@ CREATE TABLE `user` (
   `username` varchar(64) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `password` varchar(256) NOT NULL,
   `status` tinyint(4) NOT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`uid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user` */
 
-insert  into `user`(`uid`,`username`,`password`,`status`) values 
-(1,'jbb','$2a$10$mU8ZkfZtHC7oUedzdtl5.ORtSrQeg8xuuhk.3ZS54zFEYiLGBljQi',1),
-(2,'b','$2a$10$mU8ZkfZtHC7oUedzdtl5.ORtSrQeg8xuuhk.3ZS54zFEYiLGBljQi',1);
+insert  into `user`(`uid`,`username`,`password`,`status`,`create_time`,`update_time`) values 
+(1,'jbb','$2a$10$mU8ZkfZtHC7oUedzdtl5.ORtSrQeg8xuuhk.3ZS54zFEYiLGBljQi',1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(2,'b','$2a$10$mU8ZkfZtHC7oUedzdtl5.ORtSrQeg8xuuhk.3ZS54zFEYiLGBljQi',1,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 
 /*Table structure for table `user_role` */
 
@@ -104,15 +116,19 @@ CREATE TABLE `user_role` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `uid` bigint(20) NOT NULL,
   `role_id` bigint(20) NOT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 /*Data for the table `user_role` */
 
-insert  into `user_role`(`id`,`uid`,`role_id`) values 
-(1,1,2),
-(2,1,1),
-(6,2,2);
+insert  into `user_role`(`id`,`uid`,`role_id`,`create_time`,`update_time`) values 
+(1,1,2,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(2,1,1,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(6,2,2,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(7,1,3,'0000-00-00 00:00:00','0000-00-00 00:00:00'),
+(8,2,3,'0000-00-00 00:00:00','0000-00-00 00:00:00');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

@@ -1,5 +1,7 @@
 package com.boss.trainee.rbac.service;
 
+import com.boss.trainee.rbac.vo.RoleEditVO;
+
 /**
  * @author: Jianbinbing
  * @Date: 2020/7/27 14:13
@@ -9,22 +11,18 @@ public interface RoleService {
     /**
      * 赋予某角色权限
      *
-     * @param adminId
-     * @param roleId
-     * @param permissionId
+     * @param editVO
      * @return
      */
-    boolean addPermissions(Long adminId, Long roleId, Long permissionId);
+    boolean addPermissions(RoleEditVO editVO);
 
     /**
      * 删除某角色的某个权限
      *
-     * @param adminId
-     * @param roleId
-     * @param permissionId
+     * @param editVO
      * @return
      */
-    boolean removePermission(Long adminId, Long roleId, Long permissionId);
+    boolean removePermission(RoleEditVO editVO);
 
 
 }

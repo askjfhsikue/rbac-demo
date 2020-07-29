@@ -1,9 +1,11 @@
 
- 
-java:S1130!"„Remove the declaration of thrown exception 'org.springframework.security.access.AccessDeniedException' which is a runtime exception.(‡Ú¿Ìùÿÿÿÿ
 ¶
-java:S1130!"šRemove the declaration of thrown exception 'org.springframework.security.authentication.InsufficientAuthenticationException' which is a runtime exception.(‡Ú¿Ìùÿÿÿÿ
-T
-java:S1155"">Use isEmpty() to check whether the collection is empty or not.(¶é“Î
+java:S1130("šRemove the declaration of thrown exception 'org.springframework.security.authentication.InsufficientAuthenticationException' which is a runtime exception.(‡Ú¿Ìùÿÿÿÿ
 1
-java:S3626#"Remove this redundant jump.(ûÁÝ…
+java:S3626*"Remove this redundant jump.(ûÁÝ…
+T
+java:S1155)">Use isEmpty() to check whether the collection is empty or not.(¶é“Î
+ 
+java:S1130("„Remove the declaration of thrown exception 'org.springframework.security.access.AccessDeniedException' which is a runtime exception.(‡Ú¿Ìùÿÿÿÿ
+E
+java:S11482"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8¿§Ûô¸.

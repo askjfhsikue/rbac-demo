@@ -10,6 +10,10 @@ import org.springframework.boot.json.JsonParseException;
 import java.io.IOException;
 import java.io.StringWriter;
 
+/**
+ * @author: Jianbinbing
+ * @Date: 2020/7/28 9:52
+ */
 @Slf4j
 public class JacksonUtil {
 
