@@ -15,7 +15,7 @@ import java.io.StringWriter;
  * @Date: 2020/7/28 9:52
  */
 @Slf4j
-public class JacksonUtil {
+public class JacksonUtils {
 
     private static ObjectMapper mapper = new ObjectMapper();
 

@@ -1,15 +1,17 @@
 package com.boss.trainee.rbac.service.impl;
 
 import com.boss.trainee.rbac.dao.PermissionDAO;
-import com.boss.trainee.rbac.po.Permission;
+import com.boss.trainee.rbac.entity.dto.PermissionDTO;
+import com.boss.trainee.rbac.entity.dto.RolePermissionDTO;
+import com.boss.trainee.rbac.entity.po.Permission;
 import com.boss.trainee.rbac.service.PermissionService;
-import com.boss.trainee.rbac.service.dto.PermissionDTO;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author: Jianbinbing
@@ -57,6 +59,13 @@ public class PermissionServiceImpl implements PermissionService {
         permission.setUpdateTime(date);
         permissionDAO.updateByPrimaryKeySelective(permission);
         return false;
+    }
+
+    @Override
+    public List<RolePermissionDTO> pageGetRolePermission(Long roleId, Integer start, Integer length) {
+
+
+        return null;
     }
 
 

@@ -2,7 +2,7 @@ package com.boss.trainee.rbac.config;
 
 
 import com.boss.trainee.rbac.dao.PermissionDAO;
-import com.boss.trainee.rbac.service.dto.RolePermissionDTO;
+import com.boss.trainee.rbac.entity.dto.RolePermissionDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.ConfigAttribute;

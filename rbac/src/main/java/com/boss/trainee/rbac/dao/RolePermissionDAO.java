@@ -1,6 +1,6 @@
 package com.boss.trainee.rbac.dao;
 
-import com.boss.trainee.rbac.po.RolePermission;
+import com.boss.trainee.rbac.entity.po.RolePermission;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
@@ -22,4 +22,6 @@ public interface RolePermissionDAO extends Mapper<RolePermission> {
      */
     @Select("select id from role_permission where role_id=#{roleId} and permission_id=#{permissionId}")
     Long get(@Param("roleId") Long roleId, @Param("permissionId") Long permissionId);
+
+
 }

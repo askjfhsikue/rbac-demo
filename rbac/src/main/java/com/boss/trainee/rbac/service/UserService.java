@@ -1,6 +1,9 @@
 package com.boss.trainee.rbac.service;
 
-import com.boss.trainee.rbac.service.dto.UserDTO;
+import com.boss.trainee.rbac.entity.dto.UserDTO;
+import com.boss.trainee.rbac.entity.vo.UserVO;
+
+import java.util.List;
 
 
 /**
@@ -24,5 +27,21 @@ public interface UserService {
      * @return
      */
     boolean add(UserDTO userDTO);
+
+    /**
+     * 分页获取用户信息
+     *
+     * @param start
+     * @param length
+     * @return
+     */
+    List<UserVO> pageGet(Integer start, Integer length);
+
+    /**
+     * 获取用户数量
+     *
+     * @return
+     */
+    Integer count();
 
 }

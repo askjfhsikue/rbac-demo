@@ -1,4 +1,4 @@
-package com.boss.trainee.rbac.po;
+package com.boss.trainee.rbac.entity.po;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
 package com.boss.trainee.rbac.service.impl;
 
+import com.boss.trainee.rbac.entity.dto.UserDTO;
 import com.boss.trainee.rbac.service.UserService;
-import com.boss.trainee.rbac.service.dto.UserDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

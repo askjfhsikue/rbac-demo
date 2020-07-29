@@ -3,10 +3,10 @@ package com.boss.trainee.rbac.service.impl;
 import com.boss.trainee.rbac.dao.RoleDAO;
 import com.boss.trainee.rbac.dao.UserDAO;
 import com.boss.trainee.rbac.dao.UserRoleDAO;
-import com.boss.trainee.rbac.po.User;
-import com.boss.trainee.rbac.po.UserRole;
+import com.boss.trainee.rbac.entity.po.User;
+import com.boss.trainee.rbac.entity.po.UserRole;
+import com.boss.trainee.rbac.entity.vo.RoleEditVO;
 import com.boss.trainee.rbac.service.AdminService;
-import com.boss.trainee.rbac.vo.RoleEditVO;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -114,7 +114,7 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public boolean setRole(RoleEditVO editVO) {
 
-        if (checkPermission(editVO)) {
+        if (!checkPermission(editVO)) {
             return false;
         }
         //若有，则继续授权
@@ -135,7 +135,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean removeRole(RoleEditVO editVO) {
-        if (checkPermission(editVO)) {
+        if (!checkPermission(editVO)) {
             return false;
         }
         //若有，则继续删除
@@ -155,7 +155,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean forbidRole(RoleEditVO editVO) {
-        if (checkPermission(editVO)) {
+        if (!checkPermission(editVO)) {
             return false;
         }
         Long roleId = editVO.getRoleId();

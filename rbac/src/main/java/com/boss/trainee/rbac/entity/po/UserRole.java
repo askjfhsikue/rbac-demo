@@ -1,41 +1,38 @@
-package com.boss.trainee.rbac.po;
+package com.boss.trainee.rbac.entity.po;
 
 import lombok.Data;
-import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import java.util.Date;
-import java.util.List;
 
 /**
  * @author: Jianbinbing
- * @Date: 2020/7/22 16:23
+ * @Date: 2020/7/22 16:25
  */
 @Data
-@Table(name = "role")
-public class Role implements GrantedAuthority {
+@Table(name = "user_role")
+public class UserRole {
     /**
-     * 角色id
+     * id
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    /**
+     * 用户id
+     */
+    @Column
+    private Long uid;
 
     /**
-     * 角色名
+     * 角色id
      */
     @Column
-    private String name;
-    /**
-     * 状态
-     */
-    @Column
-    private Boolean status;
+    private Long roleId;
     /**
      * 创建时间
      */
@@ -46,15 +43,4 @@ public class Role implements GrantedAuthority {
      */
     @Column
     private Date updateTime;
-
-    /**
-     * 权限信息
-     */
-    @Transient
-    private List<Permission> permissionList;
-
-    @Override
-    public String getAuthority() {
-        return name;
-    }
 }

@@ -1,6 +1,7 @@
 package com.boss.trainee.rbac.dao;
 
-import com.boss.trainee.rbac.po.Role;
+import com.boss.trainee.rbac.entity.po.Role;
+import com.boss.trainee.rbac.entity.vo.RoleVO;
 import org.apache.ibatis.annotations.Many;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
@@ -32,6 +33,14 @@ public interface RoleDAO extends Mapper<Role> {
 
     })
     List<Role> getRoles(Long uid);
+
+    /**
+     * @param start
+     * @param length
+     * @return
+     */
+    @Select("select id,name from role limit #{start},#{length}")
+    List<RoleVO> pageGet(@Param("start") Integer start, @Param("length") Integer length);
 
     /**
      * 修改角色状态角色

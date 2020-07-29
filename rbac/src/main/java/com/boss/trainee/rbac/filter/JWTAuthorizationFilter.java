@@ -1,6 +1,6 @@
 package com.boss.trainee.rbac.filter;
 
-import com.boss.trainee.rbac.utils.JwtTokenUtil;
+import com.boss.trainee.rbac.utils.JwtTokenUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -33,9 +33,9 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
                                     HttpServletResponse response,
                                     FilterChain chain) throws IOException, ServletException {
 
-        String tokenHeader = request.getHeader(JwtTokenUtil.TOKEN_HEADER);
+        String tokenHeader = request.getHeader(JwtTokenUtils.TOKEN_HEADER);
         // 如果请求头中没有Authorization信息则直接放行了
-        if (tokenHeader == null || !tokenHeader.startsWith(JwtTokenUtil.TOKEN_PREFIX)) {
+        if (tokenHeader == null || !tokenHeader.startsWith(JwtTokenUtils.TOKEN_PREFIX)) {
             chain.doFilter(request, response);
             return;
         }
@@ -51,9 +51,9 @@ public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
      * @return
      */
     private UsernamePasswordAuthenticationToken getAuthentication(String tokenHeader) {
-        String token = tokenHeader.replace(JwtTokenUtil.TOKEN_PREFIX, "");
-        String username = JwtTokenUtil.getUsername(token);
-        String role = JwtTokenUtil.getUserRole(token);
+        String token = tokenHeader.replace(JwtTokenUtils.TOKEN_PREFIX, "");
+        String username = JwtTokenUtils.getUsername(token);
+        String role = JwtTokenUtils.getUserRole(token);
         if (username != null) {
             return new UsernamePasswordAuthenticationToken(username, null,
                     Collections.singleton(new SimpleGrantedAuthority(role))

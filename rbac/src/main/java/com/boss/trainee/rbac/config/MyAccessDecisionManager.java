@@ -1,6 +1,6 @@
 package com.boss.trainee.rbac.config;
 
-import com.boss.trainee.rbac.utils.JacksonUtil;
+import com.boss.trainee.rbac.utils.JacksonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.security.access.AccessDecisionManager;
@@ -45,7 +45,7 @@ public class MyAccessDecisionManager implements AccessDecisionManager {
             String temp = String.valueOf(authentication.getAuthorities());
             List<String> roles = new ArrayList<>();
             try {
-                roles = JacksonUtil.JsonToBean(temp, List.class);
+                roles = JacksonUtils.JsonToBean(temp, List.class);
             } catch (IOException e) {
                 e.printStackTrace();
             }

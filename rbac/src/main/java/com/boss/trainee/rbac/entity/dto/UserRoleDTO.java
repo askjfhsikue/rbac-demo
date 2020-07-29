@@ -1,4 +1,4 @@
-package com.boss.trainee.rbac.service.dto;
+package com.boss.trainee.rbac.entity.dto;
 
 import lombok.Data;
 

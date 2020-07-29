@@ -1,6 +1,6 @@
 package com.boss.trainee.rbac.dao;
 
-import com.boss.trainee.rbac.po.UserRole;
+import com.boss.trainee.rbac.entity.po.UserRole;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;

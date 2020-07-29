@@ -1,11 +1,11 @@
 package com.boss.trainee.rbac.controller;
 
+import com.boss.trainee.rbac.entity.dto.PermissionDTO;
+import com.boss.trainee.rbac.entity.vo.RoleEditVO;
 import com.boss.trainee.rbac.service.AdminService;
 import com.boss.trainee.rbac.service.PermissionService;
 import com.boss.trainee.rbac.service.RoleService;
-import com.boss.trainee.rbac.service.dto.PermissionDTO;
-import com.boss.trainee.rbac.utils.JwtTokenUtil;
-import com.boss.trainee.rbac.vo.RoleEditVO;
+import com.boss.trainee.rbac.utils.JwtTokenUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,7 +43,7 @@ public class AdminController {
      */
     @GetMapping("/setRole")
     public Object setRole(RoleEditVO editVO) {
-        Long adminId = JwtTokenUtil.getUid(request);
+        Long adminId = JwtTokenUtils.getUid(request);
         editVO.setAdminId(adminId);
         adminService.setRole(editVO);
         return true;
@@ -57,7 +57,7 @@ public class AdminController {
      */
     @GetMapping("/removeRole")
     public Object removeRole(RoleEditVO editVO) {
-        Long adminId = JwtTokenUtil.getUid(request);
+        Long adminId = JwtTokenUtils.getUid(request);
         editVO.setAdminId(adminId);
         adminService.removeRole(editVO);
         return true;
@@ -71,7 +71,7 @@ public class AdminController {
      */
     @GetMapping("/addPermission")
     public Object addPermission(RoleEditVO editVO) {
-        Long adminId = JwtTokenUtil.getUid(request);
+        Long adminId = JwtTokenUtils.getUid(request);
         editVO.setAdminId(adminId);
         roleService.addPermissions(editVO);
         return true;
@@ -85,7 +85,7 @@ public class AdminController {
      */
     @GetMapping("/deletePermission")
     public Object deletePermission(RoleEditVO editVO) {
-        Long adminId = JwtTokenUtil.getUid(request);
+        Long adminId = JwtTokenUtils.getUid(request);
         editVO.setAdminId(adminId);
         roleService.removePermission(editVO);
         return true;
@@ -93,7 +93,7 @@ public class AdminController {
 
     @PostMapping("/editRole")
     public Object editRole(@RequestBody RoleEditVO editVO) {
-        Long adminId = JwtTokenUtil.getUid(request);
+        Long adminId = JwtTokenUtils.getUid(request);
         editVO.setAdminId(adminId);
         adminService.forbidRole(editVO);
         return true;

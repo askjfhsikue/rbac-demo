@@ -1,8 +1,8 @@
 package com.boss.trainee.rbac.dao;
 
-import com.boss.trainee.rbac.po.Permission;
-import com.boss.trainee.rbac.po.Role;
-import com.boss.trainee.rbac.service.dto.RolePermissionDTO;
+import com.boss.trainee.rbac.entity.dto.RolePermissionDTO;
+import com.boss.trainee.rbac.entity.po.Permission;
+import com.boss.trainee.rbac.entity.po.Role;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
@@ -27,6 +27,7 @@ public interface PermissionDAO extends Mapper<Permission>, InsertListMapper<Perm
     @Select("select p.id,p.title,p.url from permission p,role_permission rp " +
             "where p.id=rp.permission_id and role_id=#{id}")
     List<Permission> getPermissions(Long id);
+
 
     /**
      * 获取已启用的角色、权限信息

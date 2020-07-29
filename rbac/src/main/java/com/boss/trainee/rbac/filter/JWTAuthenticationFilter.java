@@ -1,9 +1,9 @@
 package com.boss.trainee.rbac.filter;
 
-import com.boss.trainee.rbac.service.dto.UserDTO;
-import com.boss.trainee.rbac.utils.JacksonUtil;
-import com.boss.trainee.rbac.utils.JwtTokenUtil;
-import com.boss.trainee.rbac.vo.LoginUserVO;
+import com.boss.trainee.rbac.entity.dto.UserDTO;
+import com.boss.trainee.rbac.entity.vo.LoginUserVO;
+import com.boss.trainee.rbac.utils.JacksonUtils;
+import com.boss.trainee.rbac.utils.JwtTokenUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -80,11 +80,11 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             roles.add(role);
         }
 
-        String token = JwtTokenUtil.createToken(jwtUser, JacksonUtil.BeanToJson(roles));
+        String token = JwtTokenUtils.createToken(jwtUser, JacksonUtils.BeanToJson(roles));
         // 返回创建成功的token
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json; charset=utf-8");
-        String tokenStr = JwtTokenUtil.TOKEN_PREFIX + token;
+        String tokenStr = JwtTokenUtils.TOKEN_PREFIX + token;
         log.info("token:{}", tokenStr);
         response.setHeader("Authorization", tokenStr);
 

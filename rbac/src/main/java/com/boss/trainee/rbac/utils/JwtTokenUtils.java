@@ -1,6 +1,6 @@
 package com.boss.trainee.rbac.utils;
 
-import com.boss.trainee.rbac.service.dto.UserDTO;
+import com.boss.trainee.rbac.entity.dto.UserDTO;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -18,7 +18,7 @@ import java.util.Map;
  */
 @Data
 @Component
-public class JwtTokenUtil {
+public class JwtTokenUtils {
 
     public static final String TOKEN_HEADER = "Authorization";
     public static final String TOKEN_PREFIX = "Bearer ";
@@ -106,8 +106,8 @@ public class JwtTokenUtil {
      * @return
      */
     public static Long getUid(HttpServletRequest request) {
-        String tokenHeader = request.getHeader(JwtTokenUtil.TOKEN_HEADER);
-        String token = tokenHeader.replace(JwtTokenUtil.TOKEN_PREFIX, "");
+        String tokenHeader = request.getHeader(JwtTokenUtils.TOKEN_HEADER);
+        String token = tokenHeader.replace(JwtTokenUtils.TOKEN_PREFIX, "");
         Claims claims = Jwts.parser().setSigningKey(APPSECRET_KEY).parseClaimsJws(token).getBody();
         Long uid = Long.valueOf(claims.get("uid").toString());
         return uid;

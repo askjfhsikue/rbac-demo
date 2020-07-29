@@ -1,6 +1,6 @@
 package com.boss.trainee.rbac.service;
 
-import com.boss.trainee.rbac.vo.RoleEditVO;
+import com.boss.trainee.rbac.entity.vo.RoleEditVO;
 
 import java.util.Map;
 
@@ -29,6 +29,7 @@ public interface AdminService {
 
     /**
      * 删除某角色已有的权限
+     * 删除的权限必须是授权人拥有的权限
      *
      * @param editVO
      * @return
@@ -37,6 +38,7 @@ public interface AdminService {
 
     /**
      * 修改某个角色的状态
+     * 被修改的的角色必须是授权人拥有的角色
      *
      * @param editVO
      * @return

@@ -1,4 +1,4 @@
-package com.boss.trainee.rbac.service.dto;
+package com.boss.trainee.rbac.entity.dto;
 
 import lombok.Data;
 
@@ -8,6 +8,11 @@ import lombok.Data;
  */
 @Data
 public class PermissionDTO {
+
+    /**
+     * id
+     */
+    private Long id;
 
     /**
      * 权限名

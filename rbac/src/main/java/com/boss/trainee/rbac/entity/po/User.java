@@ -1,4 +1,4 @@
-package com.boss.trainee.rbac.po;
+package com.boss.trainee.rbac.entity.po;
 
 import lombok.Data;
 
@@ -23,7 +23,7 @@ public class User {
      * 用户id
      */
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "JDBC")
     private Long uid;
 
     /**

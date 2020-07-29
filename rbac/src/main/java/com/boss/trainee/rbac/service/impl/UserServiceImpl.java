@@ -3,17 +3,21 @@ package com.boss.trainee.rbac.service.impl;
 
 import com.boss.trainee.rbac.dao.UserDAO;
 import com.boss.trainee.rbac.dao.UserRoleDAO;
-import com.boss.trainee.rbac.po.User;
-import com.boss.trainee.rbac.po.UserRole;
+import com.boss.trainee.rbac.entity.dto.UserDTO;
+import com.boss.trainee.rbac.entity.po.User;
+import com.boss.trainee.rbac.entity.po.UserRole;
+import com.boss.trainee.rbac.entity.vo.UserVO;
 import com.boss.trainee.rbac.service.UserService;
-import com.boss.trainee.rbac.service.dto.UserDTO;
+import com.boss.trainee.rbac.utils.DozerUtils;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author: Jianbinbing
@@ -47,12 +51,6 @@ public class UserServiceImpl implements UserService {
     }
 
 
-    /**
-     * 获取用户名、角色、权限。
-     *
-     * @param username
-     * @return
-     */
     @Override
     public UserDTO get(String username) {
         User user = userDAO.get(username);
@@ -76,6 +74,21 @@ public class UserServiceImpl implements UserService {
         userRole.setRoleId(ROLE_ID);
         userRoleDAO.insert(userRole);
         return true;
+    }
+
+    @Override
+    public List<UserVO> pageGet(Integer start, Integer length) {
+        start = (start - 1) * length;
+        List<UserVO> userVOS = DozerUtils.listToList(userDAO.pageGet(start, length), UserVO.class);
+        return userVOS;
+    }
+
+    @Override
+    public Integer count() {
+
+        Example example = new Example(User.class);
+        Integer count = userDAO.selectCountByExample(example);
+        return count;
     }
 
 

@@ -1,11 +1,13 @@
-package com.boss.trainee.rbac.service.dto;
+package com.boss.trainee.rbac.entity.dto;
 
-import com.boss.trainee.rbac.po.User;
+import com.boss.trainee.rbac.entity.po.Role;
+import com.boss.trainee.rbac.entity.po.User;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * @author: Jianbinbing
@@ -32,6 +34,8 @@ public class UserDTO implements UserDetails {
     /**
      * 角色信息
      */
+    private List<Role> roleList;
+
     private Collection<? extends GrantedAuthority> authorities;
 
     /**
