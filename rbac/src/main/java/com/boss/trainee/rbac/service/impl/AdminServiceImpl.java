@@ -5,7 +5,8 @@ import com.boss.trainee.rbac.dao.UserDAO;
 import com.boss.trainee.rbac.dao.UserRoleDAO;
 import com.boss.trainee.rbac.entity.po.User;
 import com.boss.trainee.rbac.entity.po.UserRole;
-import com.boss.trainee.rbac.entity.vo.RoleEditVO;
+import com.boss.trainee.rbac.entity.vo.roleVO.RoleEditVO;
+import com.boss.trainee.rbac.entity.vo.roleVO.RoleStatusVO;
 import com.boss.trainee.rbac.service.AdminService;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -154,12 +155,13 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public boolean forbidRole(RoleEditVO editVO) {
+    public boolean forbidRole(RoleStatusVO roleStatusVO) {
+        RoleEditVO editVO = mapper.map(roleStatusVO, RoleEditVO.class);
         if (!checkPermission(editVO)) {
             return false;
         }
-        Long roleId = editVO.getRoleId();
-        Boolean status = editVO.getStatus();
+        Long roleId = roleStatusVO.getRoleId();
+        Boolean status = roleStatusVO.getStatus();
         Date date = new Date();
         roleDAO.forbidRole(roleId, status, date);
         return false;

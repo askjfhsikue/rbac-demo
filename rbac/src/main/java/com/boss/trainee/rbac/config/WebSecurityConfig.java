@@ -29,6 +29,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserDetailsImpl userDetails;
 
+    private static final String[] AUTH_WHITELIST = {
+            "/swagger-resources/**",
+            "/swagger-ui.html",
+            "/v2/**",
+            "/webjars/**",
+            "/login"
+    };
 
     @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
@@ -50,7 +57,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 // 需要验证了的用户才能访问
                 //请求路径“/login”容许访问
-                .antMatchers("/login").permitAll()
+                .antMatchers(AUTH_WHITELIST).permitAll()
                 //其它请求都需要校验才能访问
                 .anyRequest().authenticated()
                 .and()

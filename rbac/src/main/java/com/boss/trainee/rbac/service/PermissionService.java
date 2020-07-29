@@ -1,9 +1,7 @@
 package com.boss.trainee.rbac.service;
 
-import com.boss.trainee.rbac.entity.dto.PermissionDTO;
 import com.boss.trainee.rbac.entity.dto.RolePermissionDTO;
-
-import java.util.List;
+import com.boss.trainee.rbac.entity.vo.permission.PermissionVO;
 
 /**
  * @author: Jianbinbing
@@ -15,18 +13,19 @@ public interface PermissionService {
      * 往权限表里增加权限
      * 若权限存在则直接返回
      *
-     * @param permissionDTO
+     * @param permissionVO
      * @return
      */
-    boolean insert(PermissionDTO permissionDTO);
+    boolean insert(PermissionVO permissionVO);
 
     /**
      * 修改权限表中权限
      *
-     * @param permissionDTO
+     * @param permissionVO
      * @return
      */
-    boolean edit(PermissionDTO permissionDTO);
+    boolean edit(PermissionVO permissionVO);
+
 
     /**
      * 分页获取指定角色的权限
@@ -36,6 +35,6 @@ public interface PermissionService {
      * @param length
      * @return
      */
-    List<RolePermissionDTO> pageGetRolePermission(Long roleId, Integer start, Integer length);
+    RolePermissionDTO pageGetRolePermission(Long roleId, Integer start, Integer length);
 
 }

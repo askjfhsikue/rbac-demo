@@ -16,6 +16,15 @@ public class DozerUtils {
     @Autowired
     private static Mapper mapper;
 
+    /**
+     * list对象转list对象
+     *
+     * @param sourceList
+     * @param targetClass
+     * @param <T>
+     * @param <S>
+     * @return
+     */
     public static <T, S> List<T> listToList(List<S> sourceList, Class<T> targetClass) {
         List targetList = new ArrayList();
         for (S s :

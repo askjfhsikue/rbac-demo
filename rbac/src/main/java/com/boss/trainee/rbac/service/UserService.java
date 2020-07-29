@@ -1,7 +1,7 @@
 package com.boss.trainee.rbac.service;
 
 import com.boss.trainee.rbac.entity.dto.UserDTO;
-import com.boss.trainee.rbac.entity.vo.UserVO;
+import com.boss.trainee.rbac.entity.vo.userVO.UserVO;
 
 import java.util.List;
 

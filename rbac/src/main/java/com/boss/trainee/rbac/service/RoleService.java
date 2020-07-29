@@ -1,7 +1,7 @@
 package com.boss.trainee.rbac.service;
 
-import com.boss.trainee.rbac.entity.vo.RoleEditVO;
-import com.boss.trainee.rbac.entity.vo.RoleVO;
+import com.boss.trainee.rbac.entity.dto.RoleDTO;
+import com.boss.trainee.rbac.entity.vo.roleVO.RolePermissionEditVO;
 
 import java.util.List;
 
@@ -18,7 +18,15 @@ public interface RoleService {
      * @param length
      * @return
      */
-    List<RoleVO> pageGetRole(Integer start, Integer length);
+    List<RoleDTO> pageGetRole(Integer start, Integer length);
+
+    /**
+     * 获取指定用户的所有角色
+     *
+     * @param uid
+     * @return
+     */
+    List<RoleDTO> getUserRole(Long uid);
 
     /**
      * 获取角色数量
@@ -32,20 +40,20 @@ public interface RoleService {
      * 赋予的权限必须是授权人拥有的权限
      * 若该角色已有权限，则不操作；否则添加
      *
-     * @param editVO
+     * @param rolePermissionEditVO
      * @return
      */
-    boolean addPermissions(RoleEditVO editVO);
+    boolean addPermissions(RolePermissionEditVO rolePermissionEditVO);
 
     /**
      * 删除某角色的某个权限
      * 删除的权限必须是授权人拥有的权限
      * 若该角色已有权限，则删除；否则不操作
      *
-     * @param editVO
+     * @param rolePermissionEditVO
      * @return
      */
-    boolean removePermission(RoleEditVO editVO);
+    boolean removePermission(RolePermissionEditVO rolePermissionEditVO);
 
 
 }

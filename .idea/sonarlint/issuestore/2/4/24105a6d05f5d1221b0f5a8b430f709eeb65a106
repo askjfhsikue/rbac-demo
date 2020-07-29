@@ -1,5 +1,5 @@
 
-§
-java:S1130)"„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(¸Ð»’ùÿÿÿÿ8À®€ò¸.
 E
 java:S11482"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8À®€ò¸.
+§
+java:S1130)"„Remove the declaration of thrown exception 'org.springframework.security.core.AuthenticationException' which is a runtime exception.(¸Ð»’ùÿÿÿÿ8À®€ò¸.

@@ -1,6 +1,7 @@
 package com.boss.trainee.rbac.service;
 
-import com.boss.trainee.rbac.entity.vo.RoleEditVO;
+import com.boss.trainee.rbac.entity.vo.roleVO.RoleEditVO;
+import com.boss.trainee.rbac.entity.vo.roleVO.RoleStatusVO;
 
 import java.util.Map;
 
@@ -40,8 +41,8 @@ public interface AdminService {
      * 修改某个角色的状态
      * 被修改的的角色必须是授权人拥有的角色
      *
-     * @param editVO
+     * @param roleStatusVO
      * @return
      */
-    boolean forbidRole(RoleEditVO editVO);
+    boolean forbidRole(RoleStatusVO roleStatusVO);
 }

@@ -4,6 +4,7 @@ import com.boss.trainee.rbac.dao.PermissionDAO;
 import com.boss.trainee.rbac.entity.dto.PermissionDTO;
 import com.boss.trainee.rbac.entity.dto.RolePermissionDTO;
 import com.boss.trainee.rbac.entity.po.Permission;
+import com.boss.trainee.rbac.entity.vo.permission.PermissionVO;
 import com.boss.trainee.rbac.service.PermissionService;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class PermissionServiceImpl implements PermissionService {
     private Mapper mapper;
 
     /**
-     * 判断是否已存在改权限
+     * 判断是否已存在该权限
      *
      * @param url
      * @return
@@ -37,8 +38,8 @@ public class PermissionServiceImpl implements PermissionService {
     }
 
     @Override
-    public boolean insert(PermissionDTO permissionDTO) {
-        Permission permission = mapper.map(permissionDTO, Permission.class);
+    public boolean insert(PermissionVO permissionVO) {
+        Permission permission = mapper.map(permissionVO, Permission.class);
         if (getByURL(permission.getUrl()) != null) {
             return false;
         }
@@ -50,8 +51,8 @@ public class PermissionServiceImpl implements PermissionService {
     }
 
     @Override
-    public boolean edit(PermissionDTO permissionDTO) {
-        Permission permission = mapper.map(permissionDTO, Permission.class);
+    public boolean edit(PermissionVO permissionVO) {
+        Permission permission = mapper.map(permissionVO, Permission.class);
         if (getByURL(permission.getUrl()) == null) {
             return false;
         }
@@ -62,10 +63,12 @@ public class PermissionServiceImpl implements PermissionService {
     }
 
     @Override
-    public List<RolePermissionDTO> pageGetRolePermission(Long roleId, Integer start, Integer length) {
-
-
-        return null;
+    public RolePermissionDTO pageGetRolePermission(Long roleId, Integer start, Integer length) {
+        List<PermissionDTO> permissionDTOList = permissionDAO.pageGetRolePermission(roleId, start, length);
+        RolePermissionDTO rolePermissionDTO = new RolePermissionDTO();
+        rolePermissionDTO.setPermissionDTOList(permissionDTOList);
+        rolePermissionDTO.setRoleId(roleId);
+        return rolePermissionDTO;
     }
 
 

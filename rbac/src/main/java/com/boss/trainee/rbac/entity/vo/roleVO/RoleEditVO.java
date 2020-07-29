@@ -1,4 +1,4 @@
-package com.boss.trainee.rbac.entity.vo;
+package com.boss.trainee.rbac.entity.vo.roleVO;
 
 import lombok.Data;
 
@@ -20,13 +20,6 @@ public class RoleEditVO {
      * 被授权人id
      */
     private Long uid;
-    /**
-     * 权限id
-     */
-    private Long permissionId;
-    /**
-     * 状态
-     */
-    private Boolean status;
+
 
 }

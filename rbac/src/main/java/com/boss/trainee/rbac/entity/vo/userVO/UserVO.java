@@ -1,4 +1,4 @@
-package com.boss.trainee.rbac.entity.vo;
+package com.boss.trainee.rbac.entity.vo.userVO;
 
 import com.boss.trainee.rbac.entity.po.Role;
 import lombok.Data;

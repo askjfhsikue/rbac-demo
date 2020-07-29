@@ -1,7 +1,7 @@
 package com.boss.trainee.rbac.filter;
 
 import com.boss.trainee.rbac.entity.dto.UserDTO;
-import com.boss.trainee.rbac.entity.vo.LoginUserVO;
+import com.boss.trainee.rbac.entity.vo.userVO.LoginUserVO;
 import com.boss.trainee.rbac.utils.JacksonUtils;
 import com.boss.trainee.rbac.utils.JwtTokenUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -67,10 +67,9 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     protected void successfulAuthentication(HttpServletRequest request,
                                             HttpServletResponse response,
                                             FilterChain chain,
-                                            Authentication authResult) throws IOException, ServletException {
+                                            Authentication authResult) throws IOException {
 
-        // 查看源代码会发现调用getPrincipal()方法会返回一个实现了`UserDetails`接口的对象
-        // 所以就是JwtUser啦
+        // 调用getPrincipal()方法会返回一个实现了UserDetails接口的对象
         UserDTO jwtUser = (UserDTO) authResult.getPrincipal();
         List<String> roles = new ArrayList<>();
         String role = "";
@@ -86,7 +85,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         response.setContentType("application/json; charset=utf-8");
         String tokenStr = JwtTokenUtils.TOKEN_PREFIX + token;
         log.info("token:{}", tokenStr);
-        response.setHeader("Authorization", tokenStr);
+        response.setHeader(JwtTokenUtils.TOKEN_HEADER, tokenStr);
 
     }
 
@@ -101,7 +100,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
      */
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException {
-        response.getWriter().write("authentication failed, reason: " + failed.getMessage());
+        response.getWriter().write("验证失败, 理由: " + failed.getMessage());
     }
 
 }

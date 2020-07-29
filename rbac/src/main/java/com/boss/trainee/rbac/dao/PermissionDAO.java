@@ -1,8 +1,9 @@
 package com.boss.trainee.rbac.dao;
 
+import com.boss.trainee.rbac.entity.dto.PermissionDTO;
 import com.boss.trainee.rbac.entity.dto.RolePermissionDTO;
 import com.boss.trainee.rbac.entity.po.Permission;
-import com.boss.trainee.rbac.entity.po.Role;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
@@ -28,7 +29,6 @@ public interface PermissionDAO extends Mapper<Permission>, InsertListMapper<Perm
             "where p.id=rp.permission_id and role_id=#{id}")
     List<Permission> getPermissions(Long id);
 
-
     /**
      * 获取已启用的角色、权限信息
      *
@@ -39,14 +39,17 @@ public interface PermissionDAO extends Mapper<Permission>, InsertListMapper<Perm
     List<RolePermissionDTO> getRolePermissionDTO();
 
     /**
-     * 通过url获取角色
+     * 分页获取指定角色的所有权限
      *
-     * @param url
+     * @param roleId
+     * @param start
+     * @param length
      * @return
      */
-    @Select("select r.id,r.name from role r,role_permission rp,permission p " +
-            "where r.id=rp.role_id and re.permission_id=p.id and url=#{url}")
-    List<Role> getByURL(String url);
+    @Select("select p.id,p.title,p.url,p.status from permission p,role_permission rp " +
+            "where p.id=rp.permission_id and role_id=#{id} limit #{start},#{length}")
+    List<PermissionDTO> pageGetRolePermission(@Param("roleId") Long roleId, @Param("start") Integer start
+            , @Param("length") Integer length);
 
 
 }
