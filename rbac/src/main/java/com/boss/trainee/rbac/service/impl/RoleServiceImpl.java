@@ -4,15 +4,18 @@ import com.boss.trainee.rbac.dao.RoleDAO;
 import com.boss.trainee.rbac.dao.RolePermissionDAO;
 import com.boss.trainee.rbac.dao.UserDAO;
 import com.boss.trainee.rbac.entity.dto.RoleDTO;
+import com.boss.trainee.rbac.entity.dto.RolePermissionDTO;
 import com.boss.trainee.rbac.entity.po.Role;
 import com.boss.trainee.rbac.entity.po.RolePermission;
 import com.boss.trainee.rbac.entity.vo.roleVO.RolePermissionEditVO;
 import com.boss.trainee.rbac.service.RoleService;
+import com.boss.trainee.rbac.utils.JwtTokenUtils;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.List;
 
@@ -30,6 +33,8 @@ public class RoleServiceImpl implements RoleService {
     private RoleDAO roleDAO;
     @Autowired
     private Mapper mapper;
+    @Autowired
+    private HttpServletRequest request;
 
 
     @Override
@@ -41,7 +46,8 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
-    public List<RoleDTO> getUserRole(Long uid) {
+    public List<RoleDTO> getUserRole() {
+        Long uid = JwtTokenUtils.getUid(request);
         return roleDAO.getUserRole(uid);
     }
 
@@ -54,7 +60,9 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public boolean addPermissions(RolePermissionEditVO rolePermissionEditVO) {
-        Long adminId = rolePermissionEditVO.getAdminId();
+        Long adminId = JwtTokenUtils.getUid(request);
+        RolePermissionDTO rolePermissionDTO = mapper.map(rolePermissionEditVO, RolePermissionDTO.class);
+        rolePermissionDTO.setAdminId(adminId);
         Long permissionId = rolePermissionEditVO.getPermissionId();
         Long roleId = rolePermissionEditVO.getRoleId();
         //判断用户是否具有该权限
@@ -65,7 +73,7 @@ public class RoleServiceImpl implements RoleService {
         if (id != null) {
             return false;
         }
-        RolePermission rolePermission = mapper.map(rolePermissionEditVO, RolePermission.class);
+        RolePermission rolePermission = mapper.map(rolePermissionDTO, RolePermission.class);
         Date date = new Date();
         rolePermission.setCreateTime(date);
         rolePermissionDAO.insert(rolePermission);
@@ -74,7 +82,7 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public boolean removePermission(RolePermissionEditVO rolePermissionEditVO) {
-        Long adminId = rolePermissionEditVO.getAdminId();
+        Long adminId = JwtTokenUtils.getUid(request);
         Long roleId = rolePermissionEditVO.getRoleId();
         Long permissionId = rolePermissionEditVO.getPermissionId();
         if (userDAO.getUserPermissionDTO(adminId, permissionId) == null) {

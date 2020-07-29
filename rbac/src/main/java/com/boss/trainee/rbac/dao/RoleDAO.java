@@ -42,7 +42,7 @@ public interface RoleDAO extends Mapper<Role> {
      * @param length
      * @return
      */
-    @Select("select id,name from role limit #{start},#{length}")
+    @Select("select id as roleId,name from role limit #{start},#{length}")
     List<RoleDTO> pageGet(@Param("start") Integer start, @Param("length") Integer length);
 
     /**
@@ -51,7 +51,7 @@ public interface RoleDAO extends Mapper<Role> {
      * @param uid
      * @return
      */
-    @Select("select r.id,r.name from role r,user_role ur where r.id=ur.role_id and ur.uid=#{uid}")
+    @Select("select r.id as roleId,r.name from role r,user_role ur where r.id=ur.role_id and ur.uid=#{uid}")
     List<RoleDTO> getUserRole(Long uid);
 
     /**

@@ -1,24 +1,22 @@
 package com.boss.trainee.rbac.entity.vo.roleVO;
 
-import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 /**
  * @author: Jianbinbing
- * @Date: 2020/7/28 9:52
+ * @Date: 2020/7/29 19:59
  */
 @Data
-@ApiModel(description = "角色参数")
-public class RoleEditVO {
+public class RolePermissionEditVO {
 
     /**
      * 角色id
      */
     private Long roleId;
-    /**
-     * 被授权人id
-     */
-    private Long uid;
 
+    /**
+     * 权限id
+     */
+    private Long permissionId;
 
 }

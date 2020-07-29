@@ -10,11 +10,20 @@ import java.util.List;
  */
 @Data
 public class RolePermissionDTO {
+    /**
+     * 授权人id
+     */
+    private Long adminId;
 
     /**
      * 角色id
      */
     private Long roleId;
+
+    /**
+     * 授权人id
+     */
+    private Long permissionId;
 
     /**
      * 角色名

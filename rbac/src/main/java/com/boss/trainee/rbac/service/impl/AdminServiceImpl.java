@@ -3,15 +3,18 @@ package com.boss.trainee.rbac.service.impl;
 import com.boss.trainee.rbac.dao.RoleDAO;
 import com.boss.trainee.rbac.dao.UserDAO;
 import com.boss.trainee.rbac.dao.UserRoleDAO;
+import com.boss.trainee.rbac.entity.dto.RoleDTO;
 import com.boss.trainee.rbac.entity.po.User;
 import com.boss.trainee.rbac.entity.po.UserRole;
 import com.boss.trainee.rbac.entity.vo.roleVO.RoleEditVO;
 import com.boss.trainee.rbac.entity.vo.roleVO.RoleStatusVO;
 import com.boss.trainee.rbac.service.AdminService;
+import com.boss.trainee.rbac.utils.JwtTokenUtils;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -32,6 +35,8 @@ public class AdminServiceImpl implements AdminService {
     private RoleDAO roleDAO;
     @Autowired
     private Mapper mapper;
+    @Autowired
+    private HttpServletRequest request;
 
     /**
      * 获取用户信息
@@ -75,13 +80,13 @@ public class AdminServiceImpl implements AdminService {
     /**
      * 校验是否有权限进行操作
      *
-     * @param editVO
+     * @param roleDTO
      * @return
      */
-    private boolean checkPermission(RoleEditVO editVO) {
-        Long uid = editVO.getUid();
-        Long adminId = editVO.getAdminId();
-        Long roleId = editVO.getRoleId();
+    private boolean checkPermission(RoleDTO roleDTO) {
+        Long uid = roleDTO.getUid();
+        Long adminId = roleDTO.getAdminId();
+        Long roleId = roleDTO.getRoleId();
         //判断用户是否存在
         if ((selectUser(uid) == null) || (selectUser(adminId) == null)) {
             return false;
@@ -114,8 +119,10 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean setRole(RoleEditVO editVO) {
-
-        if (!checkPermission(editVO)) {
+        Long adminId = JwtTokenUtils.getUid(request);
+        RoleDTO roleDTO = mapper.map(editVO, RoleDTO.class);
+        roleDTO.setAdminId(adminId);
+        if (!checkPermission(roleDTO)) {
             return false;
         }
         //若有，则继续授权
@@ -136,7 +143,10 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean removeRole(RoleEditVO editVO) {
-        if (!checkPermission(editVO)) {
+        Long adminId = JwtTokenUtils.getUid(request);
+        RoleDTO roleDTO = mapper.map(editVO, RoleDTO.class);
+        roleDTO.setAdminId(adminId);
+        if (!checkPermission(roleDTO)) {
             return false;
         }
         //若有，则继续删除
@@ -156,8 +166,10 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean forbidRole(RoleStatusVO roleStatusVO) {
-        RoleEditVO editVO = mapper.map(roleStatusVO, RoleEditVO.class);
-        if (!checkPermission(editVO)) {
+        Long adminId = JwtTokenUtils.getUid(request);
+        roleStatusVO.setAdminId(adminId);
+        RoleDTO roleDTO = mapper.map(roleStatusVO, RoleDTO.class);
+        if (!checkPermission(roleDTO)) {
             return false;
         }
         Long roleId = roleStatusVO.getRoleId();

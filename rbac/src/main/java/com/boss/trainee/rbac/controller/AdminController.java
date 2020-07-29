@@ -7,7 +7,6 @@ import com.boss.trainee.rbac.entity.vo.roleVO.RoleStatusVO;
 import com.boss.trainee.rbac.service.AdminService;
 import com.boss.trainee.rbac.service.PermissionService;
 import com.boss.trainee.rbac.service.RoleService;
-import com.boss.trainee.rbac.utils.JwtTokenUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -43,8 +42,6 @@ public class AdminController {
     @ApiOperation(value = "为用户设置角色")
     @GetMapping("/setRole")
     public Object setRole(@ApiParam(value = "新增角色的参数", required = true) RoleEditVO editVO) {
-        Long adminId = JwtTokenUtils.getUid(request);
-        editVO.setAdminId(adminId);
         adminService.setRole(editVO);
         return true;
     }
@@ -53,8 +50,6 @@ public class AdminController {
     @ApiOperation(value = "删除用户的某个角色")
     @GetMapping("/removeRole")
     public Object removeRole(@ApiParam(value = "删除角色的参数", required = true) RoleEditVO editVO) {
-        Long adminId = JwtTokenUtils.getUid(request);
-        editVO.setAdminId(adminId);
         adminService.removeRole(editVO);
         return true;
     }
@@ -63,8 +58,6 @@ public class AdminController {
     @ApiOperation(value = "给指定角色增加权限")
     @GetMapping("/addPermission")
     public Object addPermission(@ApiParam(value = "新增权限的参数", required = true) RolePermissionEditVO rolePermissionEditVO) {
-        Long adminId = JwtTokenUtils.getUid(request);
-        rolePermissionEditVO.setAdminId(adminId);
         roleService.addPermissions(rolePermissionEditVO);
         return true;
     }
@@ -73,8 +66,6 @@ public class AdminController {
     @ApiOperation(value = "删除指定角色的指定权限")
     @GetMapping("/deletePermission")
     public Object deletePermission(@ApiParam(value = "删除权限的参数", required = true) RolePermissionEditVO rolePermissionEditVO) {
-        Long adminId = JwtTokenUtils.getUid(request);
-        rolePermissionEditVO.setAdminId(adminId);
         roleService.removePermission(rolePermissionEditVO);
         return true;
     }
@@ -82,8 +73,7 @@ public class AdminController {
     @ApiOperation(value = "编辑角色状态", notes = "禁用或者启用")
     @PostMapping("/editRole")
     public Object editRole(@ApiParam(value = "编辑角色的参数", required = true) @RequestBody RoleStatusVO editVO) {
-        Long adminId = JwtTokenUtils.getUid(request);
-        editVO.setAdminId(adminId);
+
         adminService.forbidRole(editVO);
         return true;
     }
@@ -106,8 +96,8 @@ public class AdminController {
     @ApiOperation(value = "查询指定用户的角色")
     @GetMapping("/getRoles")
     public Object getRoles() {
-        Long uid = JwtTokenUtils.getUid(request);
-        return roleService.getUserRole(uid);
+
+        return roleService.getUserRole();
     }
 
 

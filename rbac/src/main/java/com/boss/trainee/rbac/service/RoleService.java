@@ -23,10 +23,9 @@ public interface RoleService {
     /**
      * 获取指定用户的所有角色
      *
-     * @param uid
      * @return
      */
-    List<RoleDTO> getUserRole(Long uid);
+    List<RoleDTO> getUserRole();
 
     /**
      * 获取角色数量

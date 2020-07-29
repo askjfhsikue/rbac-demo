@@ -1,16 +1,17 @@
 package com.boss.trainee.rbac.entity.vo.roleVO;
 
-import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 /**
  * @author: Jianbinbing
- * @Date: 2020/7/28 9:52
+ * @Date: 2020/7/29 20:01
  */
 @Data
-@ApiModel(description = "角色参数")
-public class RoleEditVO {
-
+public class RoleStatusVO {
+    /**
+     * 授权人id
+     */
+    private Long adminId;
     /**
      * 角色id
      */
@@ -19,6 +20,8 @@ public class RoleEditVO {
      * 被授权人id
      */
     private Long uid;
-
-
+    /**
+     * 状态
+     */
+    private Boolean status;
 }

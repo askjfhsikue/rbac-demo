@@ -1,0 +1,17 @@
+
+\
+java:S2184"FCast one of the operands of this multiplication operation to a "long".(¹ÿÌÎ
+>
+java:S1148V"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+r
+java:S1488E"]Immediately return this expression instead of assigning it to the temporary variable "token".(ý¤Þ
+t
+java:S1488S"^Immediately return this expression instead of assigning it to the temporary variable "claims".(Óý“œ
+v
+java:S1488p"[Immediately return this expression instead of assigning it to the temporary variable "uid".(ïþüÜùÿÿÿÿ
+P
+java:S1118":Add a private constructor to hide the implicit public one.(éæÑƒ
+Q	java:S125""<This block of commented-out lines of code should be removed.(ÕÛ†˜
+V	java:S125$"<This block of commented-out lines of code should be removed.(¶…Ïìûÿÿÿÿ
+Q	java:S125("<This block of commented-out lines of code should be removed.(ÖÏýâ
+V	java:S1254"<This block of commented-out lines of code should be removed.(ðú¸™ùÿÿÿÿ
