@@ -16,4 +16,6 @@ public class RoleEditVO {
 
     private Long permissionId;
 
+    private Boolean status;
+
 }

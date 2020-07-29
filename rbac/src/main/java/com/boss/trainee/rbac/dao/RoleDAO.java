@@ -2,12 +2,14 @@ package com.boss.trainee.rbac.dao;
 
 import com.boss.trainee.rbac.po.Role;
 import org.apache.ibatis.annotations.Many;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -30,4 +32,15 @@ public interface RoleDAO extends Mapper<Role> {
 
     })
     List<Role> getRoles(Long uid);
+
+    /**
+     * 修改角色状态角色
+     *
+     * @param roleId
+     * @param status
+     * @param updateTime
+     * @return
+     */
+    @Select("update role set status=#{status},update_time=#{updateTime} where role_id=#{roleId}")
+    boolean forbidRole(@Param("roleId") Long roleId, @Param("status") boolean status, @Param("updateTime") Date updateTime);
 }

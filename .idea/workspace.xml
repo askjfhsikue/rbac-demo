@@ -2,42 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73216b2-db3c-400e-8357-bda059f57eb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24105a6d05f5d1221b0f5a8b430f709eeb65a106" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24105a6d05f5d1221b0f5a8b430f709eeb65a106" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2d4ea978de745f918e96cf29d4373262d7d7e8b2" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/d/2d4ea978de745f918e96cf29d4373262d7d7e8b2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/518223aee02dcf6dc519cb2e1315f7c16060db3a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/7520be5da86ed22e61b5d379cf8fb7baabe0ade3" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/7520be5da86ed22e61b5d379cf8fb7baabe0ade3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80caea2c6238ac0acfa064bd7d75fe5c90e5a691" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80caea2c6238ac0acfa064bd7d75fe5c90e5a691" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a39348a83f503e5faa0405b0d20f6c575e34a747" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a39348a83f503e5faa0405b0d20f6c575e34a747" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a9dc1e171ee7eb9b72143caef69ed4942df0c22d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a9dc1e171ee7eb9b72143caef69ed4942df0c22d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c4c27b5e9c0c814a65a8a3d4086c9b922538f027" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c4c27b5e9c0c814a65a8a3d4086c9b922538f027" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/cebb13b16bba35ef3f2659557823bcb62b84a4e8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/e/cebb13b16bba35ef3f2659557823bcb62b84a4e8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6035e46a8a03293b9970727e2f8daa92e94db2f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d6035e46a8a03293b9970727e2f8daa92e94db2f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc056f90e7b3a26e3af947583784ff64591ba346" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/boss/trainee/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/boss/trainee/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/boss/trainee/gateway/utils/FileUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/boss/trainee/gateway/utils/FileUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/config/MyInvocationSecurityMetadataSourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/config/MyInvocationSecurityMetadataSourceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/RolePermissionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/RolePermissionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/filter/JWTAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/filter/JWTAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/Permission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/RolePermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/RolePermission.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/RoleDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/RoleDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/AdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/PermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/PermissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/RolePermissionDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/RolePermissionDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/AdminServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/PermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/PermissionServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/RoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/utils/JacksonUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/utils/JacksonUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/vo/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/vo/LoginUserVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/vo/RoleEditVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/vo/RoleEditVO.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/gateway/target/" />
@@ -65,18 +38,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="159" />
+          <entry key="class" value="161" />
           <entry key="html" value="8" />
-          <entry key="java" value="521" />
+          <entry key="java" value="544" />
           <entry key="properties" value="9" />
           <entry key="xml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="159" />
+          <entry key="CLASS" value="161" />
           <entry key="HTML" value="8" />
-          <entry key="JAVA" value="521" />
+          <entry key="JAVA" value="544" />
           <entry key="Properties" value="9" />
           <entry key="XML" value="9" />
         </counts>
@@ -85,7 +58,7 @@
         <counts>
           <entry key="dummy" value="2" />
           <entry key="html" value="6" />
-          <entry key="java" value="5728" />
+          <entry key="java" value="6116" />
           <entry key="properties" value="1" />
           <entry key="xml" value="25" />
         </counts>
@@ -93,7 +66,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="6" />
-          <entry key="JAVA" value="5728" />
+          <entry key="JAVA" value="6116" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="25" />
@@ -104,22 +77,85 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/UserService.java">
+        <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/PermissionServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="170">
+              <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/AdminServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="147" column="31" selection-start-line="147" selection-start-column="31" selection-end-line="147" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/AdminService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/UserRoleDTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/RoleServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserDetailsImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="116">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/RoleDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/PermissionService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -163,11 +199,9 @@
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/config/CustomFilterSecurityMetadataSource.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/config/CustomPostProcessor.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/config/MyPostProcessor.java" />
-        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserDetailsImpl.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/UserDTO.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/UserRoleDTO.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/PermissionDAO.java" />
-        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/RoleDAO.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/UserRoleDAO.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/utils/JwtTokenUtil.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/RolePermissonDTO.java" />
@@ -184,25 +218,27 @@
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/PermissionDTO.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/RolePermissionDTO.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/config/MyInvocationSecurityMetadataSourceService.java" />
-        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/AdminService.java" />
-        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/vo/RoleEditVO.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/RoleService.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/controller/UserController.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/utils/JacksonUtil.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/boss/trainee/gateway/GatewayApplication.java" />
         <option value="$PROJECT_DIR$/gateway/src/main/java/com/boss/trainee/gateway/utils/FileUtil.java" />
-        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/PermissionService.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/UserRole.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/Permission.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/Role.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/RolePermission.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/po/User.java" />
-        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/PermissionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/RoleServiceImpl.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/UserService.java" />
         <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/PermissionService.java" />
+        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/PermissionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/vo/RoleEditVO.java" />
+        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/RoleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/RoleService.java" />
+        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/AdminService.java" />
+        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/AdminServiceImpl.java" />
+        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/RoleDAO.java" />
+        <option value="$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserDetailsImpl.java" />
       </list>
     </option>
   </component>
@@ -244,7 +280,7 @@
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="width" value="981" />
     <option name="height" value="1032" />
@@ -298,26 +334,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rbac-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rbac-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rbac-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rbac-demo" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rbac-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -380,7 +396,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rbac" type="462c0819:PsiDirectoryNode" />
-              <item name="po" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rbac-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -430,7 +446,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="E:/Android/AppData" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595986249201" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1595987982594" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/boss/参考资料/非税资料/培训资料/业务设计/财政票据管理系统HTML/财政票据管理系统HTML" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -502,12 +518,12 @@
       <workItem from="1595776698835" duration="5461000" />
       <workItem from="1595811105335" duration="38029000" />
       <workItem from="1595897845489" duration="8764000" />
-      <workItem from="1595984201278" duration="1995000" />
+      <workItem from="1595984201278" duration="3724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83518000" />
+    <option name="totallyTimeSpent" value="85247000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -601,43 +617,10 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/utils/JwtTokenUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="74" column="19" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="49" column="41" lean-forward="true" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="107" selection-start-line="107" selection-end-line="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/RoleDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="30" column="6" lean-forward="true" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -784,13 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/RoleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/controller/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -798,13 +774,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -846,13 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/vo/RoleEditVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" selection-start-line="4" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gateway/src/main/resources/bootstrap.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -862,34 +824,6 @@
           <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/PermissionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/AdminService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/UserDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-          <folding>
-            <element signature="e#1055#1056#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -929,6 +863,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/UserDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="886">
+          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
+          <folding>
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1086#1087#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="42" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="54" column="2" lean-forward="true" selection-start-line="54" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper-base/1.1.2/mapper-base-1.1.2.jar!/tk/mybatis/mapper/common/base/update/UpdateByPrimaryKeyMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/tk/mybatis/mapper-base/1.1.2/mapper-base-1.1.2.jar!/tk/mybatis/mapper/provider/base/BaseUpdateProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/vo/RoleEditVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/RoleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/PermissionDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
@@ -936,30 +933,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/AdminServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/PermissionService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="132" column="12" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="358">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/PermissionServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+        <state relative-caret-position="170">
+          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/dao/RoleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/AdminServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="147" column="31" selection-start-line="147" selection-start-column="31" selection-end-line="147" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/AdminService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/dto/UserRoleDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/RoleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
+        <state relative-caret-position="492">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -968,25 +996,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserDetailsImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rbac/src/main/java/com/boss/trainee/rbac/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="72" column="37" selection-start-line="72" selection-start-column="37" selection-end-line="72" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="116">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
         </state>
       </provider>
     </entry>

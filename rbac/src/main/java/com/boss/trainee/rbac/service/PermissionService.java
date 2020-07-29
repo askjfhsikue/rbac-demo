@@ -9,10 +9,20 @@ import com.boss.trainee.rbac.service.dto.PermissionDTO;
 public interface PermissionService {
 
     /**
-     * 给角色增加权限
+     * 增加权限
+     * 若权限存在则直接返回
      *
      * @param permissionDTO
      * @return
      */
     boolean insert(PermissionDTO permissionDTO);
+
+    /**
+     * 修改权限
+     *
+     * @param permissionDTO
+     * @return
+     */
+    boolean edit(PermissionDTO permissionDTO);
+
 }

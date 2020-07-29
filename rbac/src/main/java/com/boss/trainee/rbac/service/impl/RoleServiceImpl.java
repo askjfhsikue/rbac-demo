@@ -54,4 +54,6 @@ public class RoleServiceImpl implements RoleService {
         rolePermissionDAO.deleteByPrimaryKey(id);
         return true;
     }
+
+
 }

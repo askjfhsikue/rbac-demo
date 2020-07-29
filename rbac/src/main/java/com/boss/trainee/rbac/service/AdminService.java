@@ -34,4 +34,12 @@ public interface AdminService {
      * @return
      */
     boolean removeRole(RoleEditVO editVO);
+
+    /**
+     * 修改某个角色的状态
+     *
+     * @param editVO
+     * @return
+     */
+    boolean forbidRole(RoleEditVO editVO);
 }

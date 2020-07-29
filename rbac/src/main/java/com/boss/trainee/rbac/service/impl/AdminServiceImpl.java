@@ -1,5 +1,6 @@
 package com.boss.trainee.rbac.service.impl;
 
+import com.boss.trainee.rbac.dao.RoleDAO;
 import com.boss.trainee.rbac.dao.UserDAO;
 import com.boss.trainee.rbac.dao.UserRoleDAO;
 import com.boss.trainee.rbac.po.User;
@@ -26,6 +27,8 @@ public class AdminServiceImpl implements AdminService {
     private UserDAO userDAO;
     @Autowired
     private UserRoleDAO userRoleDAO;
+    @Autowired
+    private RoleDAO roleDAO;
     @Autowired
     private Mapper mapper;
 
@@ -137,5 +140,28 @@ public class AdminServiceImpl implements AdminService {
         return true;
     }
 
+    @Override
+    public boolean forbidRole(RoleEditVO editVO) {
+        Long uid = editVO.getUid();
+        Long adminId = editVO.getAdminId();
+        //判断用户是否存在
+        if ((selectUser(uid) == null) || (selectUser(adminId) == null)) {
+            return false;
+        }
+        Long roleId = editVO.getRoleId();
+        //判断角色是否存在
+        if (!checkRole(roleId)) {
+            return false;
+        }
+        //判断该授权人是否已有该角色,若无，则无法禁用
+        Map<Long, Long> roleMap = getRolesId(adminId);
+        if (!roleMap.containsKey(roleId)) {
+            return false;
+        }
+        Boolean status = editVO.getStatus();
+        Date date = new Date();
+        roleDAO.forbidRole(roleId, status, date);
+        return false;
+    }
 
 }

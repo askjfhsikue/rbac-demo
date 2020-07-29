@@ -40,4 +40,18 @@ public class PermissionServiceImpl implements PermissionService {
 
         return true;
     }
+
+    @Override
+    public boolean edit(PermissionDTO permissionDTO) {
+        Permission permission = mapper.map(permissionDTO, Permission.class);
+        if (getByURL(permission.getUrl()) == null) {
+            return false;
+        }
+        Date date = new Date();
+        permission.setUpdateTime(date);
+        permissionDAO.updateByPrimaryKey(permission);
+        return false;
+    }
+
+
 }
