@@ -36,6 +36,13 @@ public interface UserDAO extends Mapper<User> {
     })
     User get(String username);
 
+    /**
+     * 获取用户所有权限
+     *
+     * @param adminId
+     * @param permissionId
+     * @return
+     */
     @Select("SELECT u.uid,p.id\n" +
             "FROM USER u,user_role ur,role r,role_permission rp,permission p\n" +
             "WHERE u.uid=ur.uid AND ur.role_id=r.id AND r.id=rp.role_id AND rp.permission_id=p.id AND u.uid=#{adminId} AND p.id=#{permissionId}")

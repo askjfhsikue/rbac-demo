@@ -35,6 +35,12 @@ public class AdminController {
     @Autowired
     private PermissionService permissionService;
 
+    /**
+     * 给用户设置角色
+     *
+     * @param editVO
+     * @return
+     */
     @GetMapping("/setRole")
     public Object setRole(RoleEditVO editVO) {
         Long adminId = JwtTokenUtil.getUid(request);
@@ -43,6 +49,12 @@ public class AdminController {
         return true;
     }
 
+    /**
+     * 删除用户的某个角色
+     *
+     * @param editVO
+     * @return
+     */
     @GetMapping("/removeRole")
     public Object removeRole(RoleEditVO editVO) {
         Long adminId = JwtTokenUtil.getUid(request);
@@ -51,6 +63,12 @@ public class AdminController {
         return true;
     }
 
+    /**
+     * 给某个角色增加权限
+     *
+     * @param editVO
+     * @return
+     */
     @GetMapping("/addPermission")
     public Object addPermission(RoleEditVO editVO) {
         Long adminId = JwtTokenUtil.getUid(request);
@@ -59,6 +77,12 @@ public class AdminController {
         return true;
     }
 
+    /**
+     * 删除某个角色的某个权限
+     *
+     * @param editVO
+     * @return
+     */
     @GetMapping("/deletePermission")
     public Object deletePermission(RoleEditVO editVO) {
         Long adminId = JwtTokenUtil.getUid(request);
@@ -67,12 +91,32 @@ public class AdminController {
         return true;
     }
 
+    @PostMapping("/editRole")
+    public Object editRole(@RequestBody RoleEditVO editVO) {
+        Long adminId = JwtTokenUtil.getUid(request);
+        editVO.setAdminId(adminId);
+        adminService.forbidRole(editVO);
+        return true;
+    }
+
+    /**
+     * 新增权限
+     *
+     * @param permissionDTO
+     * @return
+     */
     @PostMapping("/insert")
     public Object insert(@RequestBody PermissionDTO permissionDTO) {
         permissionService.insert(permissionDTO);
         return true;
     }
 
+    /**
+     * 编辑权限
+     *
+     * @param permissionDTO
+     * @return
+     */
     @PostMapping("/editPermission")
     public Object editPermission(@RequestBody PermissionDTO permissionDTO) {
         permissionService.edit(permissionDTO);

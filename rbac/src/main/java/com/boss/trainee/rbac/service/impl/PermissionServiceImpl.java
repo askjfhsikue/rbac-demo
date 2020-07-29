@@ -22,6 +22,12 @@ public class PermissionServiceImpl implements PermissionService {
     @Autowired
     private Mapper mapper;
 
+    /**
+     * 判断是否已存在改权限
+     *
+     * @param url
+     * @return
+     */
     private Permission getByURL(String url) {
         Example example = new Example(Permission.class);
         example.createCriteria().andEqualTo("url", url);

@@ -9,8 +9,14 @@ import lombok.Data;
 @Data
 public class UserPermissionDTO {
 
+    /**
+     * 用户id
+     */
     private Long uid;
 
+    /**
+     * 权限id
+     */
     private Long permissionId;
 
 }
