@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 public class UserDetailsImpl implements UserDetailsService {
     @Autowired
     private UserService userService;
-    
+
 
     private final String USER_NOT_EXIST = "用户名不存在";
 

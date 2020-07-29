@@ -71,6 +71,32 @@ public class AdminServiceImpl implements AdminService {
         return true;
     }
 
+    /**
+     * 校验是否有权限进行操作
+     *
+     * @param editVO
+     * @return
+     */
+    private boolean checkPermission(RoleEditVO editVO) {
+        Long uid = editVO.getUid();
+        Long adminId = editVO.getAdminId();
+        Long roleId = editVO.getRoleId();
+        //判断用户是否存在
+        if ((selectUser(uid) == null) || (selectUser(adminId) == null)) {
+            return false;
+        }
+        //判断角色是否存在
+        if (!checkRole(roleId)) {
+            return false;
+        }
+        //判断授权人是否已有该角色,若无，则无法授权
+        Map<Long, Long> roleMap = getRolesId(adminId);
+        if (!roleMap.containsKey(roleId)) {
+            return false;
+        }
+        return true;
+    }
+
     @Override
     public Map<Long, Long> getRolesId(Long uid) {
         if (selectUser(uid) == null) {
@@ -87,25 +113,15 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean setRole(RoleEditVO editVO) {
-        Long uid = editVO.getUid();
-        Long adminId = editVO.getAdminId();
-        Long roleId = editVO.getRoleId();
-        //判断用户是否存在
-        if ((selectUser(uid) == null) || (selectUser(adminId) == null)) {
-            return false;
-        }
-        //判断角色是否存在
-        if (!checkRole(roleId)) {
-            return false;
-        }
-        //判断该授权人是否已有该角色,若无，则无法授权
-        Map<Long, Long> roleMap = getRolesId(adminId);
-        if (!roleMap.containsKey(roleId)) {
+
+        if (checkPermission(editVO)) {
             return false;
         }
         //若有，则继续授权
+        Long uid = editVO.getUid();
+        Long roleId = editVO.getRoleId();
         //判断被授权人是否已有该角色,若有，则不授权
-        roleMap = getRolesId(uid);
+        Map<Long, Long> roleMap = getRolesId(uid);
         if (roleMap.containsKey(roleId)) {
             return true;
         }
@@ -119,17 +135,14 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean removeRole(RoleEditVO editVO) {
-        Long uid = editVO.getUid();
-        Long adminId = editVO.getAdminId();
-        Long roleId = editVO.getRoleId();
-        //判断该授权人是否已有该角色,若无，则无法删除
-        Map<Long, Long> roleMap = getRolesId(adminId);
-        if (!roleMap.containsKey(roleId)) {
+        if (checkPermission(editVO)) {
             return false;
         }
         //若有，则继续删除
+        Long uid = editVO.getUid();
+        Long roleId = editVO.getRoleId();
         //判断被授权人是否已有该角色,若无，则不删除
-        roleMap = getRolesId(uid);
+        Map<Long, Long> roleMap = getRolesId(uid);
         if (!roleMap.containsKey(roleId)) {
             return false;
         }
@@ -142,22 +155,10 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean forbidRole(RoleEditVO editVO) {
-        Long uid = editVO.getUid();
-        Long adminId = editVO.getAdminId();
-        //判断用户是否存在
-        if ((selectUser(uid) == null) || (selectUser(adminId) == null)) {
+        if (checkPermission(editVO)) {
             return false;
         }
         Long roleId = editVO.getRoleId();
-        //判断角色是否存在
-        if (!checkRole(roleId)) {
-            return false;
-        }
-        //判断该授权人是否已有该角色,若无，则无法禁用
-        Map<Long, Long> roleMap = getRolesId(adminId);
-        if (!roleMap.containsKey(roleId)) {
-            return false;
-        }
         Boolean status = editVO.getStatus();
         Date date = new Date();
         roleDAO.forbidRole(roleId, status, date);

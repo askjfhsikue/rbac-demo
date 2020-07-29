@@ -9,6 +9,7 @@ import com.boss.trainee.rbac.service.UserService;
 import com.boss.trainee.rbac.service.dto.UserDTO;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -26,6 +27,8 @@ public class UserServiceImpl implements UserService {
     private UserRoleDAO userRoleDAO;
     @Autowired
     private Mapper mapper;
+    @Autowired
+    private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     /**
      * 初始角色
@@ -64,6 +67,7 @@ public class UserServiceImpl implements UserService {
     @Transactional(rollbackFor = Exception.class)
     public boolean add(UserDTO userDTO) {
         User user = mapper.map(userDTO, User.class);
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
         Date date = new Date();
         user.setCreateTime(date);
         userDAO.insert(user);

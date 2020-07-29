@@ -1,9 +1,12 @@
 package com.boss.trainee.rbac.service.dto;
 
+import lombok.Data;
+
 /**
  * @author: Jianbinbing
  * @Date: 2020/7/27 20:45
  */
+@Data
 public class PermissionDTO {
 
     /**

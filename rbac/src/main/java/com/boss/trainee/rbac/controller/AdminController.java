@@ -72,4 +72,11 @@ public class AdminController {
         permissionService.insert(permissionDTO);
         return true;
     }
+
+    @PostMapping("/editPermission")
+    public Object editPermission(@RequestBody PermissionDTO permissionDTO) {
+        permissionService.edit(permissionDTO);
+        return true;
+    }
+
 }
