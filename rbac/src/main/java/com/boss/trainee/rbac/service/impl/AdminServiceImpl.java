@@ -6,8 +6,8 @@ import com.boss.trainee.rbac.dao.UserRoleDAO;
 import com.boss.trainee.rbac.entity.dto.RoleDTO;
 import com.boss.trainee.rbac.entity.po.User;
 import com.boss.trainee.rbac.entity.po.UserRole;
-import com.boss.trainee.rbac.entity.vo.roleVO.RoleEditVO;
-import com.boss.trainee.rbac.entity.vo.roleVO.RoleStatusVO;
+import com.boss.trainee.rbac.entity.vo.role.RoleEditVO;
+import com.boss.trainee.rbac.entity.vo.role.RoleStatusVO;
 import com.boss.trainee.rbac.service.AdminService;
 import com.boss.trainee.rbac.utils.JwtTokenUtils;
 import org.dozer.Mapper;
@@ -167,8 +167,8 @@ public class AdminServiceImpl implements AdminService {
     @Override
     public boolean forbidRole(RoleStatusVO roleStatusVO) {
         Long adminId = JwtTokenUtils.getUid(request);
-        roleStatusVO.setAdminId(adminId);
         RoleDTO roleDTO = mapper.map(roleStatusVO, RoleDTO.class);
+        roleDTO.setAdminId(adminId);
         if (!checkPermission(roleDTO)) {
             return false;
         }

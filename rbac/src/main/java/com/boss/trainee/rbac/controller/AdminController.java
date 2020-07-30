@@ -1,9 +1,9 @@
 package com.boss.trainee.rbac.controller;
 
 import com.boss.trainee.rbac.entity.vo.permission.PermissionVO;
-import com.boss.trainee.rbac.entity.vo.roleVO.RoleEditVO;
-import com.boss.trainee.rbac.entity.vo.roleVO.RolePermissionEditVO;
-import com.boss.trainee.rbac.entity.vo.roleVO.RoleStatusVO;
+import com.boss.trainee.rbac.entity.vo.role.RoleEditVO;
+import com.boss.trainee.rbac.entity.vo.role.RolePermissionEditVO;
+import com.boss.trainee.rbac.entity.vo.role.RoleStatusVO;
 import com.boss.trainee.rbac.service.AdminService;
 import com.boss.trainee.rbac.service.PermissionService;
 import com.boss.trainee.rbac.service.RoleService;

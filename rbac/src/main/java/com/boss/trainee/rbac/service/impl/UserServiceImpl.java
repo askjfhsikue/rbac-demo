@@ -6,7 +6,7 @@ import com.boss.trainee.rbac.dao.UserRoleDAO;
 import com.boss.trainee.rbac.entity.dto.UserDTO;
 import com.boss.trainee.rbac.entity.po.User;
 import com.boss.trainee.rbac.entity.po.UserRole;
-import com.boss.trainee.rbac.entity.vo.userVO.UserVO;
+import com.boss.trainee.rbac.entity.vo.user.UserVO;
 import com.boss.trainee.rbac.service.UserService;
 import com.boss.trainee.rbac.utils.DozerUtils;
 import org.dozer.Mapper;

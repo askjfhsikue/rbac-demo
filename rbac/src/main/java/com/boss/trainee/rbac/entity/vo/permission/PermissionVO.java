@@ -1,5 +1,7 @@
 package com.boss.trainee.rbac.entity.vo.permission;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -7,19 +9,15 @@ import lombok.Data;
  * @Date: 2020/7/29 20:10
  */
 @Data
+@ApiModel(description = "权限类")
 public class PermissionVO {
 
-    /**
-     * 权限名
-     */
+    @ApiModelProperty(value = "权限名")
     private String title;
 
-    /**
-     * 对应路径
-     */
+    @ApiModelProperty(value = "权限路径")
     private String url;
-    /**
-     * 状态
-     */
+
+    @ApiModelProperty(value = "权限状态")
     private Boolean status;
 }

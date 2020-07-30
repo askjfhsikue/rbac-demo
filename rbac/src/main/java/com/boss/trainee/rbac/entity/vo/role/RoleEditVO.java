@@ -1,6 +1,7 @@
-package com.boss.trainee.rbac.entity.vo.roleVO;
+package com.boss.trainee.rbac.entity.vo.role;
 
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -11,13 +12,10 @@ import lombok.Data;
 @ApiModel(description = "角色参数")
 public class RoleEditVO {
 
-    /**
-     * 角色id
-     */
+    @ApiModelProperty(value = "角色ID")
     private Long roleId;
-    /**
-     * 被授权人id
-     */
+
+    @ApiModelProperty(value = "被授权人ID")
     private Long uid;
 
 

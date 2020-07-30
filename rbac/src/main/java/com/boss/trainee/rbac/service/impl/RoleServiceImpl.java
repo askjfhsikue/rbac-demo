@@ -7,7 +7,7 @@ import com.boss.trainee.rbac.entity.dto.RoleDTO;
 import com.boss.trainee.rbac.entity.dto.RolePermissionDTO;
 import com.boss.trainee.rbac.entity.po.Role;
 import com.boss.trainee.rbac.entity.po.RolePermission;
-import com.boss.trainee.rbac.entity.vo.roleVO.RolePermissionEditVO;
+import com.boss.trainee.rbac.entity.vo.role.RolePermissionEditVO;
 import com.boss.trainee.rbac.service.RoleService;
 import com.boss.trainee.rbac.utils.JwtTokenUtils;
 import org.dozer.Mapper;

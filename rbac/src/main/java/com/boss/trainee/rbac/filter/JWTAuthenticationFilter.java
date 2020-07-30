@@ -1,7 +1,7 @@
 package com.boss.trainee.rbac.filter;
 
 import com.boss.trainee.rbac.entity.dto.UserDTO;
-import com.boss.trainee.rbac.entity.vo.userVO.LoginUserVO;
+import com.boss.trainee.rbac.entity.vo.user.LoginUserVO;
 import com.boss.trainee.rbac.utils.JacksonUtils;
 import com.boss.trainee.rbac.utils.JwtTokenUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;

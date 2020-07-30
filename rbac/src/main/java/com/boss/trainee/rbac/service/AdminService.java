@@ -1,7 +1,7 @@
 package com.boss.trainee.rbac.service;
 
-import com.boss.trainee.rbac.entity.vo.roleVO.RoleEditVO;
-import com.boss.trainee.rbac.entity.vo.roleVO.RoleStatusVO;
+import com.boss.trainee.rbac.entity.vo.role.RoleEditVO;
+import com.boss.trainee.rbac.entity.vo.role.RoleStatusVO;
 
 import java.util.Map;
 

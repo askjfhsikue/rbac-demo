@@ -1,7 +1,7 @@
 package com.boss.trainee.rbac.service;
 
 import com.boss.trainee.rbac.entity.dto.RoleDTO;
-import com.boss.trainee.rbac.entity.vo.roleVO.RolePermissionEditVO;
+import com.boss.trainee.rbac.entity.vo.role.RolePermissionEditVO;
 
 import java.util.List;
 
